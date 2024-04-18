@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cis_436_p4.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_lowerBodyFragment"
+            app:destination="@id/lowerBodyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_upperBodyFragment"
+            app:destination="@id/upperBodyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cardioFragment"
+            app:destination="@id/cardioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upperBodyFragment"
+        android:name="com.example.cis_436_p4.UpperBodyFragment"
+        android:label="fragment_upper_body"
+        tools:layout="@layout/fragment_upper_body" >
+        <action
+            android:id="@+id/action_upperBodyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lowerBodyFragment"
+        android:name="com.example.cis_436_p4.LowerBodyFragment"
+        android:label="fragment_lower_body"
+        tools:layout="@layout/fragment_lower_body" >
+        <action
+            android:id="@+id/action_lowerBodyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardioFragment"
+        android:name="com.example.cis_436_p4.CardioFragment"
+        android:label="fragment_cardio"
+        tools:layout="@layout/fragment_cardio" >
+        <action
+            android:id="@+id/action_cardioFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
