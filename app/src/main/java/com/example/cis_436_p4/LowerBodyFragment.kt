@@ -7,12 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.cis_436_p4.databinding.FragmentLowerBodyBinding
 
 class LowerBodyFragment : Fragment() {
 
     private lateinit var binding: FragmentLowerBodyBinding
+
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +30,15 @@ class LowerBodyFragment : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
+        binding.testView.text = viewModel.getWeight().toString() + viewModel.getDate().toString() + viewModel.getExercise().toString() + viewModel.getReps().toString()
+
+
+    }
+
     private fun setupViews() {
         val exercises = arrayOf("Squats into Jumps", "Calf Raises", "Lunges")
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, exercises)
@@ -36,7 +48,27 @@ class LowerBodyFragment : Fragment() {
 
     private fun setupListeners() {
         binding.btnLogActivity.setOnClickListener {
+
+            var holder = ""
+
+            if (binding.etWeight.text.isNotEmpty()){
+                viewModel.setWeight(binding.etWeight.text.toString())
+            }
+
+            if (binding.etDate.text.isNotEmpty()){
+                viewModel.setDate(binding.etDate.text.toString())
+            }
+
+            viewModel.setExercise(binding.exerciseSpinner.selectedItem?.toString() ?: " ")
+
+
+            if (binding.etReps.text.isNotEmpty()){
+                viewModel.setReps(binding.etReps.text.toString())
+            }
+
+            binding.testView.text = viewModel.getWeight().toString() + viewModel.getDate().toString() + viewModel.getExercise().toString() + viewModel.getReps().toString()
             logActivity()
+
         }
 
         binding.btnLowerHome.setOnClickListener {
