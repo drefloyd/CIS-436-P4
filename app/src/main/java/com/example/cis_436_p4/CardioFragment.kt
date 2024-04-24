@@ -21,9 +21,11 @@ class CardioFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inflate the layout for this fragment
         binding = FragmentCardioBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        // Initialize views and listeners
         setupViews()
         setupListeners()
 
@@ -53,6 +55,7 @@ class CardioFragment : Fragment() {
         }
     }
 
+    // Setup Spinner adapter with exercise options
     private fun setupViews() {
         val exercises = arrayOf("Jogging", "Jumping Jacks", "Burpees")
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, exercises)
@@ -88,6 +91,7 @@ class CardioFragment : Fragment() {
             binding.etDate.text.clear()
             binding.etWeight.text.clear()
             binding.etReps.text.clear()
+            binding.rbWorkoutRating.rating = 0.0f
             binding.tvErrorMessage.text = ""
         }
     }

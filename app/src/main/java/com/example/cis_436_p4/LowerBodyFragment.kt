@@ -20,9 +20,11 @@ class LowerBodyFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inflate the layout for this fragment
         binding = FragmentLowerBodyBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        // Initialize views and listeners
         setupViews()
         setupListeners()
 
@@ -52,6 +54,7 @@ class LowerBodyFragment : Fragment() {
         }
     }
 
+    // Setup Spinner adapter with exercise options
     private fun setupViews() {
         val exercises = arrayOf("Squats into Jumps", "Calf Raises", "Lunges")
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, exercises)
@@ -87,6 +90,7 @@ class LowerBodyFragment : Fragment() {
             binding.etDate.text.clear()
             binding.etWeight.text.clear()
             binding.etReps.text.clear()
+            binding.rbWorkoutRating.rating = 0.0f
             binding.tvErrorMessage.text = ""
         }
     }
