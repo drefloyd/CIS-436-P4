@@ -9,19 +9,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
-        android:id="@+id/btnLowerHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="44dp"
-        android:text="Go Back Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/tvLowerBodyWorkout"
         android:layout_width="wrap_content"
@@ -34,95 +21,114 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvCalf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="50dp"
-        android:text="Calf Raises"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvLunges"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvSquats"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvLunges"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="30dp"
-        android:text="Lunges"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvCalf"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvSquats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="20dp"
-        android:text="Squats into Jump"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvCalf"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="123dp"
         android:layout_height="106dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/calf"
         app:layout_constraintEnd_toStartOf="@+id/imageView6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/tvCalf" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="115dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/squats"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+    <TextView
+        android:id="@+id/tvCalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="50dp"
+        android:text="Calf Raises"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvLunges"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSquats"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Log an activity below:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvSquats" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="122dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="104dp"
+        android:layout_height="107dp"
         android:src="@drawable/lunges"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/tvLunges" />
 
-    <EditText
-        android:id="@+id/etDate"
-        android:layout_width="94dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toStartOf="@+id/tvExercise"
+    <TextView
+        android:id="@+id/tvSquats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="20dp"
+        android:text="Squats into Jump"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvCalf"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvDate"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogMessage" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLunges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="30dp"
+        android:text="Lunges"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvCalf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="115dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/squats"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvSquats" />
+
+    <ScrollView
+        android:id="@+id/svLoggedActivities"
+        android:layout_width="329dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLowerHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogActivity"
+        app:layout_constraintVertical_bias="0.84">
+
+        <LinearLayout
+            android:id="@+id/llLoggedActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
     <TextView
         android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="76dp"
         android:text="Date:"
         app:layout_constraintEnd_toStartOf="@+id/etDate"
         app:layout_constraintHorizontal_bias="0.5"
@@ -130,42 +136,21 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/tvExercise"
+        android:id="@+id/tvWorkoutRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="Exercise:"
-        app:layout_constraintEnd_toStartOf="@+id/exerciseSpinner"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/etDate"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogMessage" />
-
-    <Spinner
-        android:id="@+id/exerciseSpinner"
-        android:layout_width="102dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="76dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvExercise"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/tvWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="Weight:"
-        app:layout_constraintEnd_toStartOf="@+id/etWeight"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="36dp"
+        android:text="Workout Rating:"
+        app:layout_constraintEnd_toStartOf="@+id/rbWorkoutRating"
+        app:layout_constraintHorizontal_bias="0.767"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWeight" />
 
     <EditText
         android:id="@+id/etWeight"
-        android:layout_width="106dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="105dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/tvReps"
@@ -174,33 +159,32 @@
         app:layout_constraintTop_toBottomOf="@+id/etDate" />
 
     <TextView
-        android:id="@+id/tvLogMessage"
+        android:id="@+id/tvWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Log an activity below:"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:layout_marginTop="40dp"
+        android:text="Weight:"
+        app:layout_constraintEnd_toStartOf="@+id/etWeight"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
 
     <TextView
-        android:id="@+id/tvReps"
+        android:id="@+id/tvExercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
-        android:text="Reps:"
-        app:layout_constraintEnd_toStartOf="@+id/etReps"
+        android:layout_marginTop="40dp"
+        android:text="Exercise:"
+        app:layout_constraintEnd_toStartOf="@+id/exerciseSpinner"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/etWeight"
-        app:layout_constraintTop_toBottomOf="@+id/tvExercise" />
+        app:layout_constraintStart_toEndOf="@+id/etDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogMessage" />
 
     <EditText
         android:id="@+id/etReps"
         android:layout_width="118dp"
         android:layout_height="48dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
@@ -208,31 +192,98 @@
         app:layout_constraintStart_toEndOf="@+id/tvReps"
         app:layout_constraintTop_toBottomOf="@+id/exerciseSpinner" />
 
+    <TextView
+        android:id="@+id/tvReps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Reps:"
+        app:layout_constraintEnd_toStartOf="@+id/etReps"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etWeight"
+        app:layout_constraintTop_toBottomOf="@+id/tvExercise" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="94dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@+id/tvExercise"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogMessage" />
+
+    <Button
+        android:id="@+id/btnLowerHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="8dp"
+        android:text="Go Back Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rbWorkoutRating"
+        android:layout_width="238dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReps"
+        app:layout_constraintVertical_bias="0.044" />
+
     <Button
         android:id="@+id/btnLogActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="204dp"
         android:text="Log Activity"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogMessage" />
 
-    <ScrollView
-        android:id="@+id/svLoggedActivities"
-        android:layout_width="345dp"
-        android:layout_height="135dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLowerHome"
+    <Spinner
+        android:id="@+id/exerciseSpinner"
+        android:layout_width="102dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogActivity">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvExercise"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
-        <LinearLayout
-            android:id="@+id/llLoggedActivities"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <TextView
+        android:id="@+id/tvPrevActivitiesHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Previous Activities:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/svLoggedActivities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvErrorMessage"
+        android:layout_width="358dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogMessage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
